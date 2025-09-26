@@ -1,0 +1,27 @@
+.about {
+    padding: 60px 0;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__wrapper {
+        @include flexSB;
+        align-items: start;
+        background-color: $colorWhite2;
+        border-radius: 20px;
+        padding: 30px;
+    }
+    &__information {
+        width: 100%;
+        max-width: 600px;
+        &-paragraph {
+            margin-bottom: 30px;
+            @include TenorSans;
+            font-size: 20px;
+            color: $colorBlack;
+        }
+    }
+    &__img {
+        width: 600px;
+        height: 760px;
+    }
+}

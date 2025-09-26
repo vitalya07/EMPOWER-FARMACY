@@ -57,7 +57,7 @@ button:focus {
   font-weight: 700;
   line-height: 120%;
   font-size: 50px;
-  color: #020202;
+  color: #0061ae;
 }
 
 .subtitle {
@@ -263,6 +263,46 @@ button:focus {
   width: 100%;
   max-width: 300px;
   height: 50px;
+}
+
+.about {
+  padding: 60px 0;
+}
+.about__title {
+  margin-bottom: 50px;
+}
+.about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  background-color: #f4f4f6;
+  border-radius: 20px;
+  padding: 30px;
+}
+.about__information {
+  width: 100%;
+  max-width: 600px;
+}
+.about__information-paragraph {
+  margin-bottom: 30px;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 20px;
+  color: #020202;
+}
+.about__img {
+  width: 600px;
+  height: 760px;
 }
 
 .products {
