@@ -1,0 +1,41 @@
+@mixin flexSB {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+@mixin flexEnd {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+@mixin flexASSB {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+@mixin flexAScenter {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+@mixin TenorSans {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    line-height: 120%;
+}
+@mixin roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    line-height: 120%;
+}

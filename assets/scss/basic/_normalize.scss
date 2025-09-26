@@ -1,0 +1,36 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    background-color: $colorWhite;
+}
+// body {
+//     background: red;
+// }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input {
+    border: none;
+    &:focus {
+        outline: 1px solid #00000000;
+    }
+}
+button {
+    border: none;
+    transition: all .4s ease;
+    cursor: pointer;
+    &:focus {
+        outline: 1px solid #00000000;
+    }
+}

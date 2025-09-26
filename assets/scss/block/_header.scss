@@ -1,0 +1,88 @@
+.header {
+    padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    background-color: $colorWhite;
+    z-index: 10;
+    &__wrapper {
+        @include flexSB;
+        background-color: $colorWhite;
+    }
+    &__logo {
+        display: block;
+        width: 200px;
+        height: auto;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__left {
+        @include flexStart;
+        gap: 60px;
+    }
+    &__nav {
+        & > ul {
+            @include flexCenter;
+            gap: 20px;
+            & > li {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 0;
+                    height: 1px;
+                    background-color: $colorBlue;
+                    transition: all .4s ease;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+                & > a {
+                    @include TenorSans;
+                    font-size: 20px;
+                    color: $colorBlack;
+                }
+            }
+        }
+    }
+    &__right {
+        @include flexEnd;
+        gap: 50px;
+    }
+    &__users {
+        @include flexCenter;
+        gap: 10px;
+    }
+    &__item {
+        display: block;
+        width: 30px;
+        height: 30px;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__cart {
+        position: relative;
+        & > span {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 16px;
+            height: 16px;
+            background-color: $colorBlue;
+            border-radius: 100%;
+            @include flexCenter;
+            @include TenorSans;
+            font-size: 12px;
+            color: $colorWhite;
+        }
+    }
+}

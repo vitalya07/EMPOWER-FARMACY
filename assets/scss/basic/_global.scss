@@ -1,0 +1,36 @@
+.body__container {
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    max-width: 1570px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title {
+    @include roboto-bold;
+    font-size: 50px;
+    color: $colorBlack;
+}
+.subtitle {
+    @include TenorSans;
+    font-size: 30px;
+    color: $colorBlack;
+}
+.descr {
+    @include TenorSans;
+    font-size: 18px;
+    color: $colorGray;
+}
+.btn {
+    @include roboto-bold;
+    padding: 10px 20px;
+    background-color: $colorBlue;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: $colorWhite;
+    &:hover {
+        background-color: $colorBlueHover;
+    }
+}

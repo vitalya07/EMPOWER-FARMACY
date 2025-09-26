@@ -1,0 +1,78 @@
+.products {
+    padding: 60px 0;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 20px;
+    }
+    &__item {
+        padding: 30px;
+        border: 1px solid $colorGray2;
+        border-radius: 20px;
+        box-shadow: 10px 10px 15px $colorBlack;
+        position: relative;
+        height: 600px;
+        &-img {
+            display: block;
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        &-title {
+            @include roboto-bold;
+            font-size: 20px;
+            color: $colorBlack;
+            margin-bottom: 20px;
+        }
+        &-descr {
+            @include TenorSans;
+            font-size: 16px;
+            color: $colorGray;
+            margin-bottom: 20px;
+        }
+        &-bottom {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            @include flexSB;
+            gap: 30px
+        }     
+        &-price {
+            position: absolute;
+            left: 30px;
+            bottom: 80px;
+            @include roboto-bold;
+            font-size: 30px;
+            color: $colorBlack;
+        }   
+    }
+    &__quantity {
+        @include flexSB;
+        width: 100px;
+        &-btn {
+            width: 30px;
+            height: 30px;
+            @include flexCenter;
+            background-color: $colorGray2;
+            border-radius: 10px;
+            @include roboto-bold;
+            font-size: 20px;
+            color: $colorBlack;
+        }
+        &-coll {
+            width: 30px;
+            height: 30px;
+            @include flexCenter;
+            background-color: $colorGray2;
+            border-radius: 10px;
+            @include roboto-bold;
+            font-size: 20px;
+            color: $colorBlack;
+        }
+    }
+}
