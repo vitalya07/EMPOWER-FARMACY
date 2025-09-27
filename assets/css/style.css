@@ -232,6 +232,110 @@ button:focus {
   color: #fff;
 }
 
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 30;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal__dialog {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.modal__content {
+  min-height: 500px;
+  max-height: 800px;
+}
+.modal__head {
+  margin-bottom: 80px;
+}
+.modal__title {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 22px;
+  line-height: 120%;
+  text-align: center;
+}
+.modal__close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+}
+.modal__close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #020202;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #020202;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal__input {
+  display: block;
+  border: 2px solid #0061ae;
+  padding: 5px 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 20px;
+}
+.modal__btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.modal__show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal__show .modal__dialog {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .main {
   padding: 260px 0 0 0;
   background-image: url("../img/main/main-bg.webp");
