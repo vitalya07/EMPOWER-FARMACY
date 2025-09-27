@@ -26,8 +26,23 @@ document.addEventListener('DOMContentLoaded', ()=> {
         })
     });
     modal.addEventListener('click', (e)=> {
-        if(e.target.classList.contains('modal__close') || e.target == modal.classList.contains('modal__showl')) {
+        if(e.target.classList.contains('modal__close') || e.target == modal) {
             removeModal();
         }
-    })
+    });
+    window.addEventListener('keydown', (e)=> {
+        if(e.code === 'Escape' || e.target.classList.contains('modal__show')) {
+            removeModal(); 
+        }
+    });
+    //Слайдер
+    new Swiper('.peptidesuitability__swiper', {
+        direction: 'horizontal',
+        loop: true,    
+        speed: 1000,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 })
