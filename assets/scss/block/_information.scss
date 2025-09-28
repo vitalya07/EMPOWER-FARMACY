@@ -1,0 +1,65 @@
+.information {
+    padding: 100px 0;
+    &__title {
+        &-main {
+            font-size: 80px;
+            margin-bottom: 80px;
+            color: $colorBlueDark;
+        }
+    }
+    &__descr {
+        @include TenorSans;
+        font-size: 22px;
+        line-height: 150%;
+        color: $colorGray;
+        margin-bottom: 20px;
+    }
+    &__item {
+        cursor: pointer;
+        &-box {
+            position: relative;
+            @include flexStart;
+            margin-bottom: 20px;
+            gap: 30px;
+        }
+        &-close {
+             transition: all .4s ease;
+        }
+        &-1 {
+            display: block;
+            width: 50px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $colorBlue;
+        }
+         &-2 {
+            display: block;
+            width: 50px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $colorBlue;
+            transform:rotate(90deg);
+        }
+        &-subtitle {
+            @include roboto-bold;
+            font-size: 24px;
+            line-height: 120%;
+            color: $colorBlack;
+            margin-bottom: 20px;
+        }
+        &-descr {
+            @include TenorSans;
+            font-size: 20px;
+            line-height: 150%;
+            color: $colorGray;
+            margin-bottom: 50px;
+        }
+        &-info, &-pharagraph {
+            @include TenorSans;
+            font-size: 20px;
+            line-height: 150%;
+            color: $colorGray;
+            margin-bottom: 50px;
+        }
+    }
+}

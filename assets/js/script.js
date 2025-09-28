@@ -1,11 +1,53 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     //Акардион начало //
-    const FAQItem = document.querySelectorAll('.FAQ__item');
-    FAQItem.forEach((item)=> {
-        item.addEventListener('click', ()=> {
-            item.classList.toggle('FAQ__show');
-        })
-    })
+    // const FAQItem = document.querySelectorAll('.FAQ__item');
+    // FAQItem.forEach((item)=> {
+    //     item.addEventListener('click', ()=> {
+    //         item.classList.toggle('FAQ__show');
+    //     })
+    // });
+    // function openAccordion(selector) {
+    //     const items = document.querySelectorAll(selector);
+        
+    //     items.forEach((item) => {
+    //         item.addEventListener('click', () => {
+    //             const isOpen = item.classList.contains('FAQ__show');
+    //             items.forEach((otherItem) => {
+    //                 otherItem.classList.remove('FAQ__show');
+    //             });
+    //             if (!isOpen) {
+    //                 item.classList.add('FAQ__show');
+    //             }
+    //         });
+    //     });
+    // }
+    // openAccordion('.FAQ__item');
+    function openAccordion(selector, classToToggle = 'FAQ__show') {
+        const items = document.querySelectorAll(selector);
+        
+        items.forEach((item) => {
+            item.addEventListener('click', () => {
+                const isOpen = item.classList.contains(classToToggle);
+                
+                // Закрываем все другие элементы в этой секции
+                items.forEach((otherItem) => {
+                    otherItem.classList.remove(classToToggle);
+                });
+                
+                // Toggle для текущего: если закрыт — открываем, если открыт — закрываем
+                if (!isOpen) {
+                    item.classList.add(classToToggle);
+                }
+            });
+        });
+    }
+
+    // Вызов для FAQ
+    openAccordion('.FAQ__item', 'FAQ__show');
+
+    // Вызов для information (клик на .information__item-box)
+    openAccordion('.information__item-box', 'information__show');
+
     //Акардеон конец//
     //Модальное окно начало
     const modal = document.querySelector('.modal');
@@ -45,4 +87,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
             prevEl: '.swiper-button-prev',
         },
     });
+    new Swiper('.product__swipper', {
+        direction: 'horizontal',
+        loop: true,    
+        speed: 1000,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+     
 })

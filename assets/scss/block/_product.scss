@@ -1,0 +1,48 @@
+.product {
+    padding: 100px 0;
+    &__wrapper {
+        @include flexSB;
+        align-items: start;
+    }
+    &__swipper {
+        width: 60%;
+    }
+
+    &__info {
+        width: 35%;
+        padding: 60px 20px;
+        background-color: $colorWhite2;
+        border-radius: 20px;
+    }
+    &__item {
+        &-img {
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+    &__list {
+        list-style-type: disc;
+        margin-left: 30px;
+        margin-bottom: 50px;
+        &-item {
+            @include roboto-bold;
+            font-size: 20px;
+            color: $colorBlue;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    &__hide {
+        display: none;
+    }
+    
+}

@@ -92,6 +92,19 @@ button:focus {
   background-color: #004280;
 }
 
+.information__hidden {
+  display: none;
+}
+
+.information__item-box.information__show + .information__item-descr {
+  display: block;
+}
+
+.information__item-box.information__show .information__item-close {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header {
   padding: 30px 0;
   position: fixed;
@@ -722,6 +735,204 @@ button:focus {
   color: #fff;
   width: 100%;
   max-width: 600px;
+}
+
+.product {
+  padding: 100px 0;
+}
+.product__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.product__swipper {
+  width: 60%;
+}
+.product__info {
+  width: 35%;
+  padding: 60px 20px;
+  background-color: #f4f4f6;
+  border-radius: 20px;
+}
+.product__item-img {
+  width: 700px;
+  margin: 0 auto;
+}
+.product__list {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+.product__list-item {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 20px;
+  color: #0061ae;
+  margin-bottom: 20px;
+}
+.product__list-item:last-child {
+  margin-bottom: 0;
+}
+.product__btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.product__hide {
+  display: none;
+}
+
+.information {
+  padding: 100px 0;
+}
+.information__title-main {
+  font-size: 80px;
+  margin-bottom: 80px;
+  color: #121e3e;
+}
+.information__descr {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 22px;
+  line-height: 150%;
+  color: #5c5c5c;
+  margin-bottom: 20px;
+}
+.information__item {
+  cursor: pointer;
+}
+.information__item-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+.information__item-close {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.information__item-1 {
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0061ae;
+}
+.information__item-2 {
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0061ae;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.information__item-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 24px;
+  line-height: 120%;
+  color: #020202;
+  margin-bottom: 20px;
+}
+.information__item-descr {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 20px;
+  line-height: 150%;
+  color: #5c5c5c;
+  margin-bottom: 50px;
+}
+.information__item-info, .information__item-pharagraph {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 20px;
+  line-height: 150%;
+  color: #5c5c5c;
+  margin-bottom: 50px;
+}
+
+.result {
+  padding: 100px 0;
+  background-color: #f4f4f6;
+}
+.result__title {
+  margin-bottom: 30px;
+}
+.result__subtitle {
+  font-size: 16px;
+}
+.result__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.result__container {
+  width: 30%;
+}
+.result__before {
+  margin-bottom: 30px;
+}
+.result__list-title {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 30px;
+  line-height: 120%;
+  color: #121e3e;
+  margin-bottom: 20px;
+}
+.result__list-item {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 18px;
+  color: #5c5c5c;
+}
+.result__img {
+  width: 40%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.result__btn {
+  max-width: 600px;
+  width: 100%;
+  height: 70px;
+  font-size: 30px;
 }
 
 .footer {

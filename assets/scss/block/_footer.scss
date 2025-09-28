@@ -48,7 +48,7 @@
     &__images {
         @include flexCenter;
         gap: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
         &-img {
             display: block;
             width: 100px;
