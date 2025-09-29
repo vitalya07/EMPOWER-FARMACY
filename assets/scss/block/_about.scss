@@ -24,4 +24,12 @@
         width: 600px;
         height: 760px;
     }
+    &__next {
+        display: none;
+        margin-bottom: 30px;
+        @include TenorSans;
+        font-size: 12px;
+        color: $colorBlue;
+        text-decoration: underline;
+    }
 }

@@ -1,27 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     //Акардион начало //
-    // const FAQItem = document.querySelectorAll('.FAQ__item');
-    // FAQItem.forEach((item)=> {
-    //     item.addEventListener('click', ()=> {
-    //         item.classList.toggle('FAQ__show');
-    //     })
-    // });
-    // function openAccordion(selector) {
-    //     const items = document.querySelectorAll(selector);
-        
-    //     items.forEach((item) => {
-    //         item.addEventListener('click', () => {
-    //             const isOpen = item.classList.contains('FAQ__show');
-    //             items.forEach((otherItem) => {
-    //                 otherItem.classList.remove('FAQ__show');
-    //             });
-    //             if (!isOpen) {
-    //                 item.classList.add('FAQ__show');
-    //             }
-    //         });
-    //     });
-    // }
-    // openAccordion('.FAQ__item');
     function openAccordion(selector, classToToggle = 'FAQ__show') {
         const items = document.querySelectorAll(selector);
         
@@ -44,11 +22,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     // Вызов для FAQ
     openAccordion('.FAQ__item', 'FAQ__show');
-
-    // Вызов для information (клик на .information__item-box)
+    // Вызов для information
     openAccordion('.information__item-box', 'information__show');
-
     //Акардеон конец//
+
     //Модальное окно начало
     const modal = document.querySelector('.modal');
     const btnOpenModal = document.querySelectorAll('.open__modal');
@@ -77,7 +54,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             removeModal(); 
         }
     });
-    //Слайдер
+    //Модальное окно конец
+
+    //Слайдер начало
     new Swiper('.peptidesuitability__swiper', {
         direction: 'horizontal',
         loop: true,    
@@ -96,5 +75,21 @@ document.addEventListener('DOMContentLoaded', ()=> {
             prevEl: '.swiper-button-prev',
         },
     });
-     
+    //Слайдер конец
+     //Меню-гамбургер начало
+    const header = document.querySelector('.header');
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', ()=> {
+        header.classList.toggle('menu__active')
+    });
+    //Меню-гамбургер конец
+    //Выпадающий список начало
+    const aboutNext = document.querySelector('.about__next');
+    const aboutParagraph = document.querySelectorAll('.about__information-paragraph');
+    aboutNext.addEventListener('click', ()=> {
+        aboutParagraph.forEach(p => {
+            p.classList.toggle('about__hide')
+        })
+    });
+     //Выпадающий список конец
 })

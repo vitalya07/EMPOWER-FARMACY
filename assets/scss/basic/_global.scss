@@ -42,6 +42,28 @@
     display: block;   
 }
 .information__item-box.information__show .information__item-close {
-   transform: rotate(-45deg); 
-  
+   transform: rotate(-45deg);   
+}
+
+.menu__active {
+    .mobile__nav {
+        right: 0;
+    }
+    .hamburger {
+        & > span {
+            &:first-child {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
 }
