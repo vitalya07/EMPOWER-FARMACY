@@ -422,7 +422,7 @@ button:focus {
 
 .main {
   padding: 260px 0 0 0;
-  background-image: url("../img/main/main-bg.webp");
+  background-image: url("../img/banner-2.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -489,8 +489,10 @@ button:focus {
   color: #020202;
 }
 .about__img {
-  width: 600px;
-  height: 760px;
+  width: 800px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__next {
   display: none;
@@ -1039,6 +1041,9 @@ button:focus {
   margin-bottom: 50px;
 }
 .footer__logo {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #fff;
   display: block;
   width: 200px;
   height: auto;
@@ -1154,9 +1159,31 @@ button:focus {
   .header__right {
     gap: 20px;
   }
+  .about__wrapper {
+    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .about__information {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
   .about__information-paragraph {
     font-size: 16px;
     margin-bottom: 20px;
+  }
+  .about__img {
+    width: 100%;
+    height: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .product {
     padding: 40px 0;
@@ -1236,10 +1263,6 @@ button:focus {
   }
   .about__next {
     display: block;
-  }
-  .about__img {
-    width: 390px;
-    height: 420px;
   }
   .products__item {
     padding: 15px;
@@ -1327,10 +1350,6 @@ button:focus {
   .subtitle {
     font-size: 20px;
   }
-  .about__img {
-    width: 260px;
-    height: 300px;
-  }
   .products__grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -1345,26 +1364,6 @@ button:focus {
   }
 }
 @media (max-width: 565px) {
-  .about__wrapper {
-    padding: 10px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px;
-  }
-  .about__information {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .about__img {
-    width: 100%;
-    height: auto;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   .products__grid {
     display: none;
   }
@@ -1460,6 +1459,9 @@ button:focus {
   .container {
     padding: 0 10px;
   }
+  .main {
+    background-image: url("../img/banner-mobile-2.webp");
+  }
   .main__title {
     font-size: 18px;
     margin-bottom: 20px;
@@ -1470,6 +1472,9 @@ button:focus {
   .main__btn {
     width: 100%;
     max-width: 100%;
+  }
+  .about__wrapper {
+    padding: 15px;
   }
   .FAQ__item {
     padding: 10px 0;
@@ -1492,6 +1497,9 @@ button:focus {
   }
   .products__item {
     width: 360px;
+  }
+  .FAQ {
+    background-image: url("../img/FAQ-bg-2.jpg");
   }
 }
 @media (max-width: 400px) {
