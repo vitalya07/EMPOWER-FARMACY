@@ -47,6 +47,46 @@
         }
         
     }
+    .product {
+        padding: 40px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__swipper {
+            width: 100%;
+        }
+        &__info {
+            padding: 30px 15px;
+            width: 100%;
+        }
+    }
+    .information {
+        &__title {
+            font-size: 30px;
+            &-main {
+                font-size: 40px;
+            }
+        }
+        &__item {
+            &-descr {
+                font-size: 16px;
+            }
+            &-1 {
+                width: 30px;
+            }
+            &-2 {
+                width: 30px;
+            }
+        }
+    }
+    .result {
+        &__title {
+            font-size: 25px;
+        }
+        &__img {
+            width: 70%;
+        }
+    }
     .footer {
         &__logo {
             width: 130px;
@@ -114,6 +154,39 @@
         &__item {
             max-width: 800px;
             height: 540px;
+        }
+    }
+    .result {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__container {
+            width: 80%;
+        }
+        &__affter {
+            margin-bottom: 30px;
+        }
+    }
+    .information {
+        padding: 40px 0;
+        &__title {
+            font-size: 16px;
+            &-main {
+                margin-bottom: 20px;
+            }
+        }
+        &__item {
+            &-1 {
+                width: 20px;
+                height: 2px;
+            }
+            &-2 {
+                width: 20px;
+                height: 2px;
+            }
         }
     }
 }
@@ -199,7 +272,15 @@
         }
     }
     .products {
+        &__grid {
+            display: none;
+        }
+        &__swiper {
+            display: block;
+        }
         &__item {
+            width: 400px;
+            box-shadow: 0 0 0;
             &-img {
                 width: 100px;
             }
@@ -219,6 +300,47 @@
                  max-width: 320px;
             }
            
+        }
+    }
+    .product {
+        &__list {
+            &-item {
+                font-size: 16px;               
+            }
+        }
+        &__item {
+            &-img {
+                width: 100%;
+                height: auto;
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__pagination {
+            display: block;
+        }
+    }
+    .information {
+        &__item {
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+    .result {
+        padding: 60px 0;
+        &__list {
+            &-title {
+                font-size: 20px;
+            }
+        }
+        &__btn {
+            max-width: 350px;
+            height: 45px;
+            font-size: 20px;
         }
     }
     .footer {
@@ -278,11 +400,105 @@
     .feedback {
         padding: 10px 0 30px 0;
     }
+    .products {
+        &__item {
+            width: 360px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .main {
+        padding: 120px 0 0 0;
+        height: 65vh;
+    }
+    .peptidesuitability {
+        &__item {
+            height: 240px;
+        }
+    }
+    .products {
+        &__item {
+            width: 320px;
+            height: 465px;
+            &-img {
+                width: 70px;
+            }
+            &-price {
+                font-size: 20px;
+            }    
+            &-descr {
+                font-size: 12px;
+            }        
+        }
+        &__btn {
+            font-size: 12px;
+        }
+        &__link {
+            font-size: 12px;
+        }
+    }
+    .feedback {
+        &__container {
+            padding: 30px 15px;
+        }
+        &__warning {
+            font-size: 12px;
+        }
+    }
+    .footer {
+        &__nav {
+            & > ul {
+                flex-direction: column;
+                align-items: start;;
+               & > li > a {
+                font-size: 12px;
+                }
+            }
+        }
+        &__images {
+            &-img {
+                width: 60px;
+                height: auto;
+            }
+        }
+    }
+    .FAQ {
+        min-height: 540px;
+        height: 340px;
+    }
 }
 @media (max-width: 360px) {
     .peptidesuitability {
         &__item {
             height: 220px;
+            &-title {
+                max-width: 220px;
+            }
         }
     }
+    .products {
+        &__item {
+            width: 280px;
+        }
+    }
+    .FAQ {
+        &__item {
+            &-title {
+                font-size: 12px;
+            }
+            &-descr {
+                font-size: 12px;
+            }
+            &-img {
+                width: 16px;
+                height: 16px;
+                &:nth-child(3) {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:320px) {
+    
 }

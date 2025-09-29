@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         direction: 'horizontal',
         loop: true,    
         speed: 1000,
+        spaceBetween: 10, 
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -70,10 +71,35 @@ document.addEventListener('DOMContentLoaded', ()=> {
         direction: 'horizontal',
         loop: true,    
         speed: 1000,
+        spaceBetween: 10, 
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {  // Добавлено: настройка пагинации
+            el: '.swiper-pagination',  // Элемент для пагинации (точки)
+            clickable: true,  // Делает точки кликабельными для перехода к слайду
+            type: 'bullets',  // Тип: точки (можно 'fraction' для "1/5" или 'progressbar')
+        },
+    });
+    new Swiper('.products__swiper', {
+    direction: 'horizontal',
+    loop: true,    
+    speed: 1000,
+    spaceBetween: -10,  // Отрицательный отступ: слайды накладываются на 20 пикселей, второй виден
+    slidesPerView: 1,   // Показываем 1 полный слайд (второй будет "выглядывать")
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        450: {  // Для экранов >= 450px
+            spaceBetween: -20,  // Наложение на 20 пикселей
+        },
+        400: {  // Для экранов >= 450px
+            spaceBetween: -20,  // Наложение на 20 пикселей
+        }
+    }
     });
     //Слайдер конец
      //Меню-гамбургер начало
