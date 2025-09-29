@@ -16,6 +16,10 @@
     }
     &__item {
         cursor: pointer;
+        position: relative;
+        &-title {
+            width: 90%;
+        }
         &-box {
             position: relative;
             @include flexStart;
@@ -23,7 +27,11 @@
             gap: 30px;
         }
         &-close {
-             transition: all .4s ease;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            transition: all .4s ease;
         }
         &-1 {
             display: block;
