@@ -422,7 +422,7 @@ button:focus {
 
 .main {
   padding: 260px 0 0 0;
-  background-image: url("../img/bg-main.jpg");
+  background-image: url("../img/main/bg-main.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1480,9 +1480,6 @@ button:focus {
 @media (max-width: 450px) {
   .container {
     padding: 0 10px;
-  }
-  .main {
-    background-image: url("../img/bg-main.jpg");
   }
   .main__title {
     font-size: 18px;
